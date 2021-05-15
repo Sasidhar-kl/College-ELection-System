@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cand.css">
+    <style>
+    h1{
+        text-align: center;
+    }
+
+    
+    .topnav{
+        overflow: hidden;
+    }
+
+    
+    .topnav a{
+        float: right;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;    
+}
+
+
+.navigation-bar > a {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    height: 80px;        
+    line-height: 80px;    
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #00fecb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #00fecb;
+}
+
+.container {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 10px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+    <div class="topnav">
+    &nbsp;&nbsp;&nbsp;
+    <img src="https://img.collegedekhocdn.com/media/img/institute/logo/KL_Logo_Final_New-pdf_1.jpg?tr=h-55,w-50" alt="">
+     <a href="welcome.html">LogOut</a>
+     <a href="results.jsp">View Results</a>
+     <a href="adminviewcand.jsp">View Candidates</a>
+     <a href="addcandidate.html">Add Candidates</a>
+     <a href="https://www.kluniversity.in/">About</a>
+     <a href="vote1.html">Home</a>
+    </div>
+</div>
+<br>
+
+<h1>Add Candidates</h1>
+<div class="container">
+  <form action="addcand.jsp">
+    <div class="row">
+      <div class="col-25">
+        <label for="id">Student ID</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="id" name="id" placeholder="Student Id..." required>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Student Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" placeholder="Student Name..." required>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="year">Student Year</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="year" name="year" placeholder="Student Year..." required>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="mobile">Mobile No</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="mobile" name="mobile" placeholder="Mobile No..." required>
+      </div>
+     </div>
+      
+    <div class="row">
+      <div class="col-25">
+        <label for="mail">Student Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="mail" name="mail" placeholder="Student Email..." required>
+      </div>
+    </div>
+      
+    <div class="row">
+      <div class="col-25">
+        <label for="role">Choose Role</label>
+      </div>
+      <div class="col-75">
+        <select id="role" name="role" required>
+          <option value="">Select Role</option>
+          <option value="president">President</option>
+          <option value="vicepresident">Vice President</option>
+          <option value="secretary">Secretary</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    
+    <div class="row">
+      <center><input type="submit" value="Add"></center>
+    </div>
+  </form>
+  </div>
+</header>
+</body>
+</html>

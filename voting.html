@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cand.css">
+    <style>
+    h1{
+        text-align: center;
+    }
+
+    
+    .topnav{
+        overflow: hidden;
+    }
+
+    
+    .topnav a{
+        float: right;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;    
+}
+
+
+.navigation-bar > a {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    height: 80px;        
+    line-height: 80px;    
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+    <div class="topnav">
+    &nbsp;&nbsp;&nbsp;
+    <img src="https://img.collegedekhocdn.com/media/img/institute/logo/KL_Logo_Final_New-pdf_1.jpg?tr=h-55,w-50" alt="">
+     <a href="welcome.html">LogOut</a></li>
+     <a href="results.jsp">View Results</a>
+     <a href="studentviewcand.jsp">View Candidates</a>
+     <a href="contact.html">Contact us</a>
+     <a href="https://www.kluniversity.in/">About</a>
+     <a href="vote.html">Home</a>
+    </div>
+</div>
+<center style="color:bharath"><h1>Vote Here</h1></center>
+
+<div class="container">
+  <form action="voting.jsp">
+    <div class="row">
+      <div class="col-25">
+        <label for="id">Student ID</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="id" name="id" placeholder="Student Id..." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="mobile">Mobile No</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="mobile" name="mobile" placeholder="Mobile No..." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="pres">Elect President</label>
+      </div>
+      <div class="col-75">
+        <select id="pres" name="pres" required>
+          <option value="">Select President</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="vpres">Elect Vice President</label>
+      </div>
+      <div class="col-75">
+        <select id="vpres" name="vpres" required>
+          <option value="">Select Vice President</option>
+          <option value="VA">VA</option>
+          <option value="VB">VB</option>
+          <option value="VC">VC</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="sc">Elect Secretary</label>
+      </div>
+      <div class="col-75">
+        <select id="sc" name="sc" required>
+          <option value="">Select Secretary</option>
+          <option value="SA">SA</option>
+          <option value="SB">SB</option>
+          <option value="SC">SC</option>
+        </select>
+      </div>
+    </div>
+    <div>
+    
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+</header>
+</body>
+</html>
